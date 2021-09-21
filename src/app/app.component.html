@@ -1,17 +1,1 @@
-<div class="cls1">
-  <h1>{{title}}</h1>
-  <hr>
-</div>
-<div>
-  <!-- <button class="btn btn-primary" (click)="ngOnDestroy()">Go Offline</button> -->
-  <ul>
-    <li *ngFor="let i of courses$ | async">
-      {{ i }}
-    </li>
-  </ul>
-</div>
-<div>
-  <hr>
-  <h1>Authors</h1>
-  <p>{{ authors$ | async | json }}</p>
-</div>
+<router-outlet></router-outlet>

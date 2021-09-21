@@ -1,0 +1,24 @@
+<div class="cls1">
+    <h1>{{title}}</h1>
+    <hr>
+  </div>
+  <div>
+    <!-- <button class="btn btn-primary" (click)="ngOnDestroy()">Go Offline</button> -->
+     <ul>
+      <li *ngFor="let i of courses$ | async">
+        {{ i }}
+      </li>
+    </ul>
+  </div> 
+  <div>
+    <h1>Authors</h1><hr>
+    <p>{{ authors$ | async | json }}</p>
+  </div> 
+  <div>
+    <ul *ngIf="authors$ | async as authors">
+      <li>{{ authors.name}}</li>
+      <li>{{authors.students}}</li>
+      <li>{{authors.isPremium}}</li>
+    </ul>
+  </div>
+  <button (click)="goToNextPage()">Go To Next Page</button>
